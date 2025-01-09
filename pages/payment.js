@@ -3,19 +3,19 @@ import { useRouter } from "next/router";
 
 export default function Payment() {
 
-    const host = "http://reg.medivisionevents.com";
+    const host = "https://reg.medivisionevents.com";
     const router = useRouter();
 
     const paymentCCAvenue = () => {
         let paymentData = {
-            merchant_id: '3414705', // Merchant ID (Required)
-            order_id: "ORD123", // Order ID - It can be generated from our project
-            amount: "1", // Payment Amount (Required)
-            currency: "INR", // Payment Currency Type (Required)
-            redirect_url: `${host}/api/ccavenue-handle`, // Success URL (Required)
-            cancel_url: `${host}/api/ccavenue-handle`, // Failed/Cancel Payment URL (Required)
-            language: 'EN', // Language (Optional)
-            billing_tel: "1234567890" // Billing Mobile Number (Optional)
+            merchant_id: '3414705',
+            order_id: "ORD123", 
+            amount: "1",
+            currency: "INR", 
+            redirect_url: `${host}/api/ccavenue-handle`, 
+            cancel_url: `${host}/api/ccavenue-handle`,
+            language: 'EN',
+            billing_tel: "1234567890" 
         }
 
         let encReq = CCAvenue.getEncryptedOrder(paymentData);
