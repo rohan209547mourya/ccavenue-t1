@@ -87,8 +87,8 @@ class Configure {
 }
 
 const CCAvenue = new Configure({
-    working_key: "WORKING_KEY", // Working Key from CCAvenue
-    merchant_id: "MERCHANT_ID" // Merchant ID from CCAvenue
+    working_key: "89393DBCF1D75A5489094EE2A90B39C2", // Working Key from CCAvenue
+    merchant_id: "3414705" // Merchant ID from CCAvenue
 });
 
 export default CCAvenue;
